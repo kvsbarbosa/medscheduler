@@ -25,13 +25,13 @@ public class PatientController {
         return ResponseEntity.ok(patientDTO);
     }
 
-    @GetMapping(value = "/{cpf}")
+    @GetMapping(value = "/cpf/{cpf}")
     public ResponseEntity<PatientDTO> findByCpf(@PathVariable String cpf) {
         PatientDTO patientDTO = service.findByCpf(cpf);
         return ResponseEntity.ok(patientDTO);
     }
 
-    @GetMapping(value = "{email}")
+    @GetMapping(value = "/email/{email}")
     public ResponseEntity<PatientDTO> findByEmail(@PathVariable String email) {
         PatientDTO patientDTO = service.findByEmail(email);
         return ResponseEntity.ok(patientDTO);
